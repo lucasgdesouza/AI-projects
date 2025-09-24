@@ -26,3 +26,11 @@ Fashion MNIST - 28x28x1 (Grayscale), 10 classes(Baseadas em tipos de roupas), 70
 Cifer 10 - 32x32x3 (Colorida), 10 classes, 60000 amostras (50000 de treino, 10000 de teste)
 
 Cifer 100 - 32x32x3 (Colorida), 20 classes, 60000 amostras (50000 de treino, 10000 de teste)
+
+**Seção de testes**
+
+Aqui serão listados alguns testes feitos nos datasets, com cinco para cada caso. A configuração inicial de cada dataset é explicitamente baseada no exemplo de cifar10 providenciado préviamente pelo professor, com modificações nas escalas de cor e classes dependendo das necessidades de cada caso. Quaisquer mudanças de configuração serão observadas nos datasets que seguirem. Cada dataset rodará por 10 epochs.
+
+**Testes de MNIST**
+Dataset 1 - Configuração "padrão". Acurácia calculada: 64,25%. Tempo total de execução: 6 minutos e 40 segundos
+Dataset 2 - Modificação em pooling, dobrando suas proporções para [4,4].
