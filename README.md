@@ -1,6 +1,6 @@
 README trabalho 1 - turma A
 
-Lucas Fraga Balbinot -
+Lucas Fraga Balbinot - 00585249
 
 Lucas Gomes de Souza - 00580466
 
