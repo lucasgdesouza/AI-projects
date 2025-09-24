@@ -31,6 +31,18 @@ Cifer 100 - 32x32x3 (Colorida), 20 classes, 60000 amostras (50000 de treino, 100
 
 Aqui serão listados alguns testes feitos nos datasets, com cinco para cada caso. A configuração inicial de cada dataset é explicitamente baseada no exemplo de cifar10 providenciado préviamente pelo professor, com modificações nas escalas de cor e classes dependendo das necessidades de cada caso. Quaisquer mudanças de configuração serão observadas nos datasets que seguirem. Cada dataset rodará por 10 epochs.
 
-**Testes de MNIST**
+**Testes de Cifar10**
 Dataset 1 - Configuração "padrão". Acurácia calculada: 64,25%. Tempo total de execução: 6 minutos e 40 segundos
-Dataset 2 - Modificação em pooling, dobrando suas proporções para [4,4].
+
+Dataset 2 - Modificação em pooling, dobrando suas proporções originais para [4,4].  Acurácia calculada: 64,82%. Tempo total de execução: 6 minutos e 12 segundos.
+
+Dataset 3 - Modificação em pooling, reduzindo suas proporções originais para [1,1]. Acurácia calculada: 57,88%. Tempo total de execução: 12 minutos e 58 segundos.
+
+Dataset 4 - Pooling retornado a [2,2]. Aumentar número de neurônios em dense para dobro do original. Acurácia calculada: 65,77%. Tempo total de execução: 10 minutos e 48 segundos.
+
+Dataset 5 - Reduzir número de neurônios de dense pela metade do original. Acurácia calculada: 60,89%. Tempo total de execução: 6 minutos e 32 segundos.
+
+Conclusões de teste inicial: Este primeiro teste foi voltado a analisar alguns elementos básicos do sistema, e como alterá-los permite afetar o cálculo da acurácia. Pelos dados iniciais, o Pooling aparenta possuir uma relação inversa para tempo e diretamente proporcional para Acurácia: ou seja,poolings maiores aparentam ser mais precisos e mais rápidos, e menores mais lentos e imprecisos. Quanto a neurônios, um número reduzido deles parece indicar um tempo menor de execução, enquanto que um maior aparenta demonstrar mais tempo, com o tempo menor possuindo menor precisão e o maior maior precisão, indicando proporcionalidade entre os elementos.
+
+**Testes de Cifar 100**
+Dataset 1 - Configuração "padrão":
