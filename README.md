@@ -1,6 +1,7 @@
 README trabalho 1 - turma A
 
 Lucas Fraga Balbinot -
+
 Lucas Gomes de Souza - 00580466
 
 Exercício 1:
