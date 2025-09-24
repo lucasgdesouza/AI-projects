@@ -32,6 +32,7 @@ Cifer 100 - 32x32x3 (Colorida), 20 classes, 60000 amostras (50000 de treino, 100
 Aqui serão listados alguns testes feitos nos datasets, com cinco para cada caso. A configuração inicial de cada dataset é explicitamente baseada no exemplo de cifar10 providenciado préviamente pelo professor, com modificações nas escalas de cor e classes dependendo das necessidades de cada caso. Quaisquer mudanças de configuração serão observadas nos datasets que seguirem. Cada dataset rodará por 10 epochs.
 
 **Testes de Cifar10**
+
 Dataset 1 - Configuração "padrão". Acurácia calculada: 64,25%. Tempo total de execução: 6 minutos e 40 segundos
 
 Dataset 2 - Modificação em pooling, dobrando suas proporções originais para [4,4].  Acurácia calculada: 64,82%. Tempo total de execução: 6 minutos e 12 segundos.
@@ -42,7 +43,20 @@ Dataset 4 - Pooling retornado a [2,2]. Aumentar número de neurônios em dense p
 
 Dataset 5 - Reduzir número de neurônios de dense pela metade do original. Acurácia calculada: 60,89%. Tempo total de execução: 6 minutos e 32 segundos.
 
-Conclusões de teste inicial: Este primeiro teste foi voltado a analisar alguns elementos básicos do sistema, e como alterá-los permite afetar o cálculo da acurácia. Pelos dados iniciais, o Pooling aparenta possuir uma relação inversa para tempo e diretamente proporcional para Acurácia: ou seja,poolings maiores aparentam ser mais precisos e mais rápidos, e menores mais lentos e imprecisos. Quanto a neurônios, um número reduzido deles parece indicar um tempo menor de execução, enquanto que um maior aparenta demonstrar mais tempo, com o tempo menor possuindo menor precisão e o maior maior precisão, indicando proporcionalidade entre os elementos.
+Conclusões de teste: Este primeiro teste foi voltado a analisar alguns elementos básicos do sistema, e como alterá-los permite afetar o cálculo da acurácia. Pelos dados iniciais, o Pooling aparenta possuir uma relação inversa para tempo e diretamente proporcional para Acurácia: ou seja,poolings maiores aparentam ser mais precisos e mais rápidos, e menores mais lentos e imprecisos. Quanto a neurônios, um número reduzido deles parece indicar um tempo menor de execução, enquanto que um maior aparenta demonstrar mais tempo, com o tempo menor possuindo menor precisão e o maior maior precisão, indicando proporcionalidade entre os elementos.
 
-**Testes de Cifar 100**
-Dataset 1 - Configuração "padrão":
+**Testes de Cifar100**
+
+Dataset 1 - Configuração "padrão": Acurácia calculada: 13,30%. Tempo total de execução: 1 minuto e 20 segundos.
+
+Dataset 2 - Para verificar se as conclusões vistas anteriormente em Cifar10 se aplicam aqui, iremos dobrar o pooling e os neurônios. Acurácia calculada: 18,27%. Tempo total de execução: 1 minuto e 17 segundos.
+
+Dataset 3 - Agora, iremos reverter as mudanças do sistema para o estado original e criar uma segunda camada Pooling2D igual à primeira. Acurácia calculada: 16,38%. Tempo total de execução: 1 minuto e 16 segundos.
+
+Dataset 4 - Agora retiramos uma camada pool e testamos o que ocorre se houver duas camadas de 64 neurônios. Acurácia calculada: 18,16%. Tempo total de execução: 1 minuto e 28 segundos.
+
+Dataset 5 - Com essas considerações, tentemos combinar as propostas de 3 e 4 para ver o que ocorre. Acurácia calculada: 18,01%. Tempo total de execução: 1 minuto e 15 segundos.
+
+Conclusões de teste: Como notado previamente, as conclusões de Cifar10 aparentam carregar para o Cifar100 sem grandes divergências. Apesar disso, notavelmente não há grande diferença de tempo entre cada caso comparado com os casos de Cifar10: pesquisa em outros materiais indica que o número maior de divisões de Cifar100 pode ser responsável por essa situação, diluindo a porcentagem para a condição atual. Sendo assim, Cifar10 seria certamente mais "fácil" que Cifar100.
+
+**Testes de Minst**
