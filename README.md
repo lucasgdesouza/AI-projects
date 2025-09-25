@@ -6,6 +6,8 @@ Lucas Gomes de Souza - 00580466
 
 Exercício 1:
 
+**Alegrete - Melhor execução da regressão linear**
+
 Valores iniciais que resultaram na melhor execução da regressão linear:
 
 b = 0; w = 0; alpha = 0.01; num_iterations = 800;
@@ -43,9 +45,9 @@ Dataset 4 - Pooling retornado a [2,2]. Aumentar número de neurônios em dense p
 
 Dataset 5 - Reduzir número de neurônios de dense pela metade do original. Acurácia calculada: 60,89%. Tempo total de execução: 6 minutos e 32 segundos.
 
-Conclusões de teste: Este primeiro teste foi voltado a analisar alguns elementos básicos do sistema, e como alterá-los permite afetar o cálculo da acurácia. Pelos dados iniciais, o Pooling aparenta possuir uma relação inversa para tempo e diretamente proporcional para Acurácia: ou seja,poolings maiores aparentam ser mais precisos e mais rápidos, e menores mais lentos e imprecisos. Quanto a neurônios, um número reduzido deles parece indicar um tempo menor de execução, enquanto que um maior aparenta demonstrar mais tempo, com o tempo menor possuindo menor precisão e o maior maior precisão, indicando proporcionalidade entre os elementos.
+Conclusões de teste: Este primeiro teste foi voltado a analisar alguns elementos básicos do sistema, e como alterá-los permite afetar o cálculo da acurácia. Pelos dados iniciais, o Pooling aparenta possuir uma relação inversa para tempo e diretamente proporcional para Acurácia: ou seja, poolings maiores aparentam ser mais precisos e mais rápidos, e menores mais lentos e imprecisos. Quanto a neurônios, um número reduzido deles parece indicar um tempo menor de execução, enquanto que um maior aparenta demonstrar mais tempo, com o tempo menor possuindo menor precisão e o maior maior precisão, indicando proporcionalidade entre os elementos.
 
-Ordem de dificuldade (Mais para menos) 3 -> 5 -> 1/2 -> 4. Cifar10 aparenta ser um dataset que favorece ter mais neurônios para fazer análises e cuidadosamente analisar as informações passadas. A similaridades entre os poolings em 1 e 2, junto com uma redução brusca em 3 com o [1,1], indica que há ganhos reduzidos com um aumento de pooling.
+Ordem de dificuldade (Mais para menos) 3 -> 5 -> 1/2 -> 4. Cifar10 aparenta ser um dataset que favorece ter mais neurônios para fazer análises e cuidadosamente analisar as informações passadas. As similaridades entre os poolings em 1 e 2, junto com uma redução brusca em 3 com o [1,1], indica que há ganhos reduzidos com um aumento de pooling.
 
 **Testes de Cifar100**
 
@@ -61,7 +63,7 @@ Dataset 5 - Com essas considerações, tentemos combinar as propostas de 3 e 4 p
 
 Conclusões de teste: Como notado previamente, as conclusões de Cifar10 aparentam carregar para o Cifar100 sem grandes divergências. Apesar disso, notavelmente não há grande diferença de tempo entre cada caso comparado com os casos de Cifar10: pesquisa em outros materiais indica que o número maior de divisões de Cifar100 pode ser responsável por essa situação, diluindo a porcentagem para a condição atual. Sendo assim, Cifar10 seria certamente mais "fácil" que Cifar100.
 
-Ordem de dificuldade: 1 -> 3 -> 5-> 4 -> 2. O que funcionou no Cifar10 funcionou aqui, com a baixa precisão também sendo devido ao aumento na dificuldade de identificar as imagens. Coisas que notavelmente funcionaram foi aumentar o número de camadas tanto de Pooling quanto de Neurônios, embora seja interessante notar que ambos ao mesmo tempo só foram superiores ao caso 3.
+Ordem de dificuldade: 1 -> 3 -> 5 -> 4 -> 2. O que funcionou no Cifar10 funcionou aqui, com a baixa precisão também sendo devido ao aumento na dificuldade de identificar as imagens. Coisas que notavelmente funcionaram foi aumentar o número de camadas tanto de Pooling quanto de Neurônios, embora seja interessante notar que ambos ao mesmo tempo só foram superiores ao caso 3.
 
 **Testes de Minst**
 
@@ -93,7 +95,7 @@ Dataset 5: Dito isso, testamos uma situação de meio ponto (48) a fim de ver se
 
 Conclusões de teste: Similar ao Minst regular, mas complexo com a adição de classes ligadas às roupas, Fashion Minst apresenta comportamento similar quanto a alterações num padrão estabelecido, necessitando de cuidado para alcançar um bom balanço que permita extrair mais do modelo e alcançar melhor acurácia.
 
-Ordem de dificuldade: 2 -> 4 -> 5 -> 3/1. Um sistema apenas um pouco mais complexo, Fashion Minst tem problemas similares a Minst mais revela algumas peculiaridades, como o balanço no número de neurônios a serem criados.
+Ordem de dificuldade: 2 -> 4 -> 5 -> 3/1. Um sistema apenas um pouco mais complexo, Fashion Minst tem problemas similares a Minst mas revela algumas peculiaridades, como o balanço no número de neurônios a serem criados.
 
 **Conclusões finais**
 
